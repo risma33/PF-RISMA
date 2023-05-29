@@ -1,0 +1,273 @@
+//import
+@import "extra/fonts";
+
+/*estilos para celulares*/
+
+/*estilos index*/
+body {
+    background-color: #ffff;
+    height: 100vh;
+
+    /*estilos header*/
+    header {
+        nav {
+            background: linear-gradient(to right, #ffff, #6E99B3);
+
+            .container-fluid {
+                .logo {
+                    position: relative;
+                    height: 3rem;
+                    width: 3rem;
+                    background-color: #fff;
+                    border-radius: 30%;
+                    border: 1.5px solid #d0d8dc;
+
+
+                    .logo-letter {
+                        position: absolute;
+                        top: 50%;
+                        left: 45%;
+                        transform: translate(-50%, -50%);
+                        font-size: 2.5rem;
+                        font-family: $font-italic;
+                        font-weight: bold;
+                        background-image: linear-gradient(to right, #6e99b3, #e1e9ee);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        color: transparent;
+                        text-align: center;
+                    }
+                }
+
+                .navbar-toggler:hover {
+                    background-color: #ffff;
+                }
+
+                #navbarNav {
+                    text-align: end;
+
+                    .navbar-nav {
+                        .nav-item {
+                            .nav-link {
+                                font-family: $font-normal
+                            }
+
+                            .nav-link:hover {
+                                color: #5c7a92;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .header__banner {
+            display: none;
+        }
+    }
+
+    /*estilos main*/
+
+    .main--index {
+        height: 100%;
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        text-align: center;
+        font-family: $font-normal;
+
+
+
+        .main__resumen--uno {
+            color: #6e99b3;
+            font-family: $font-normal;
+            width: 100vw;
+
+            h2{
+                font-size: 1.3em;
+                padding: 4rem;
+            }
+
+        }
+
+        .main__image--uno {
+            height: 18rem;
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: 13vw;
+            font-family: $font-italic;
+            font-weight: bold;
+            background-image: linear-gradient(to right, #6e99b3, #e1e9ee);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 4rem;
+            letter-spacing: 3vw;
+            padding: 2rem;
+
+            .g {
+                font-size: 22vw;
+                font-weight: bolder;
+                background-image: linear-gradient(to right, #6e99b3, #e1e9ee);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+        }
+
+        .main__resumen--dos {
+            width: 100vw;
+            height: 100%;
+            color: #ffff;
+            background: linear-gradient(#6e99b3, #d9e1e6);
+
+            h3 {
+                padding: 8rem 4rem 4rem 4rem;
+                font-size: 1.5em;
+
+            }
+
+
+            img {
+                display: block;
+                height: auto;
+                width: 100vw;
+                object-fit: contain;
+                padding: 0rem 2rem 2rem 2rem;
+                border-radius: 30%;
+            }
+        }
+
+        .main__resumen--tres {
+            @extend .main__resumen--dos;
+            background: linear-gradient(#d9e1e6, #6e99b3);
+            color: #6e99b3;
+
+            h4 {
+                padding: 8rem 4rem 4rem 4rem;
+                font-size: 1.5em;
+            }
+
+            img {
+                border-radius: 30%;
+            }
+        }
+
+        .main__resumen--cuatro {
+            @extend .main__resumen--dos;
+            background: linear-gradient(#6e99b3, #d9e1e6)
+
+            h5 {
+                padding: 8rem 4rem 0rem 4rem;
+                font-size: 1.5em;
+            }
+
+            P {
+                font-size: 1em;
+                padding: 0rem 4rem 4rem 4rem;
+
+                span {
+                    font-size: 1.5rem;
+                    margin-right: 1rem;
+                    font-weight: bolder;
+                    background-image: linear-gradient(to right, #e1e9ee, #ffff);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+            }
+
+
+            img {
+                padding: 0rem 4rem 5rem 4rem;
+                border-radius: 30%;
+            }
+        }
+
+        /*estilos footer*/
+        .footer {
+            background: linear-gradient(#d9e1e6, #6e99b3);
+            width: 100vw;
+            padding: 4rem 4rem 1rem 4rem;
+
+            h6 {
+                font-size: 1em;
+                color: #ffff;
+            }
+
+            img {
+                height: 20px;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        .main--index {
+            height: 100%;
+            margin: 0px;
+
+            .main__image--uno {
+                margin-bottom: 4rem;
+            }
+
+            .main__resumen--dos {
+                display: flex;
+                flex-direction: row;
+                padding: 2rem;
+                justify-content: center;
+                align-items: center;
+
+
+                img {
+                    width: 50%;
+                    border-radius: 30%;
+                    padding: 0px;
+                }
+            }
+
+            .main__resumen--tres {
+                background: linear-gradient(#d9e1e6, #6e99b3);
+
+                h4 {
+                    color: #fff;
+                }
+
+                img {
+                    padding: 0px;
+                }
+            }
+
+            .main__resumen--cuatro {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 50% 50%;
+                justify-items: center;
+                align-items: center;
+                padding: 0px;
+                row-gap: 0px;
+
+                h5,
+                p {
+                    grid-column: 1/2;
+                }
+
+                img {
+                    grid-column: 2/3;
+                    grid-row: 1 / span 2;
+                    width: 100%;
+                    padding: 2rem;
+
+                }
+
+            }
+        }
+
+    }
+}

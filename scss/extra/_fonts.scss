@@ -1,0 +1,14 @@
+/*fonts*/
+
+@font-face {
+    font-family: "ethnocentric-italic";
+    src: url(../font/ethnocentric.rg-italic.otf);
+}
+
+@font-face {
+    font-family: "ethnocentric";
+    src: url(../font/ethnocentricrg.otf);
+}
+
+$font-italic: "ethnocentric-italic";
+$font-normal: "ethnocentric";
