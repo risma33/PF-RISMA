@@ -25,7 +25,7 @@ body {
   /*estilos header*/
   /*estilos main*/ }
   body header nav {
-    background: linear-gradient(to right, #ffff, #6E99B3); }
+    background: linear-gradient(to right, #e1e9ee, #6E99B3); }
     body header nav .container-fluid .logo {
       position: relative;
       height: 3rem;
@@ -51,7 +51,8 @@ body {
     body header nav .container-fluid #navbarNav {
       text-align: end; }
       body header nav .container-fluid #navbarNav .navbar-nav .nav-item .nav-link {
-        font-family: "ethnocentric"; }
+        font-family: "ethnocentric";
+        color: #fff; }
       body header nav .container-fluid #navbarNav .navbar-nav .nav-item .nav-link:hover {
         color: #5c7a92; }
   body header .header__banner {
@@ -73,7 +74,7 @@ body {
         font-size: 1.3em;
         padding: 4rem; }
     body .main--index .main__image--uno {
-      height: 18rem;
+      height: 70vh;
       width: 100vw;
       display: flex;
       flex-direction: row;
@@ -87,8 +88,7 @@ body {
       -webkit-background-clip: text;
       color: transparent;
       margin-bottom: 4rem;
-      letter-spacing: 3vw;
-      padding: 2rem; }
+      letter-spacing: 3vw; }
       body .main--index .main__image--uno .g {
         font-size: 22vw;
         font-weight: bolder;
@@ -120,13 +120,11 @@ body {
       body .main--index .main__resumen--tres img {
         border-radius: 30%; }
     body .main--index .main__resumen--cuatro {
-      background: linear-gradient(#6e99b3, #d9e1e6) h5;
-        background-padding: 8rem 4rem 0rem 4rem;
-        background-font-size: 1.5em; }
-      body .main--index .main__resumen--cuatro P {
-        font-size: 1em;
-        padding: 0rem 4rem 4rem 4rem; }
-        body .main--index .main__resumen--cuatro P span {
+      background: linear-gradient(#6e99b3, #d9e1e6); }
+      body .main--index .main__resumen--cuatro h5 {
+        font-size: 1.5em;
+        padding: 4rem; }
+        body .main--index .main__resumen--cuatro h5 span {
           font-size: 1.5rem;
           margin-right: 1rem;
           font-weight: bolder;
@@ -151,8 +149,11 @@ body {
   body .main--index {
     height: 100%;
     margin: 0px; }
+    body .main--index .main__resumen--uno {
+      padding: 0rem 6rem 0rem 6rem; }
     body .main--index .main__image--uno {
-      margin-bottom: 4rem; }
+      margin-bottom: 4rem;
+      height: 80vh; }
     body .main--index .main__resumen--dos, body .main--index .main__resumen--tres, body .main--index .main__resumen--cuatro {
       display: flex;
       flex-direction: row;
@@ -171,20 +172,12 @@ body {
         padding: 0px; }
     body .main--index .main__resumen--cuatro {
       display: grid;
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 50% 50%;
+      grid-template-columns: 1fr 1fr;
       justify-items: center;
       align-items: center;
-      padding: 0px;
-      row-gap: 0px; }
-      body .main--index .main__resumen--cuatro h5,
-      body .main--index .main__resumen--cuatro p {
-        grid-column: 1/2; }
+      column-gap: 2rem; }
       body .main--index .main__resumen--cuatro img {
-        grid-column: 2/3;
-        grid-row: 1 / span 2;
-        width: 100%;
-        padding: 2rem; } }
+        width: 100%; } }
 
 /*fonts*/
 @font-face {

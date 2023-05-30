@@ -11,7 +11,7 @@ body {
     /*estilos header*/
     header {
         nav {
-            background: linear-gradient(to right, #ffff, #6E99B3);
+            background: linear-gradient(to right, #e1e9ee, #6E99B3);
 
             .container-fluid {
                 .logo {
@@ -49,7 +49,8 @@ body {
                     .navbar-nav {
                         .nav-item {
                             .nav-link {
-                                font-family: $font-normal
+                                font-family: $font-normal;
+                                color: #fff;
                             }
 
                             .nav-link:hover {
@@ -92,7 +93,7 @@ body {
         }
 
         .main__image--uno {
-            height: 18rem;
+            height: 70vh;
             width: 100vw;
             display: flex;
             flex-direction: row;
@@ -107,7 +108,6 @@ body {
             color: transparent;
             margin-bottom: 4rem;
             letter-spacing: 3vw;
-            padding: 2rem;
 
             .g {
                 font-size: 22vw;
@@ -159,16 +159,11 @@ body {
 
         .main__resumen--cuatro {
             @extend .main__resumen--dos;
-            background: linear-gradient(#6e99b3, #d9e1e6)
+            background: linear-gradient(#6e99b3, #d9e1e6);
 
             h5 {
-                padding: 8rem 4rem 0rem 4rem;
                 font-size: 1.5em;
-            }
-
-            P {
-                font-size: 1em;
-                padding: 0rem 4rem 4rem 4rem;
+                padding: 4rem;
 
                 span {
                     font-size: 1.5rem;
@@ -213,8 +208,13 @@ body {
             height: 100%;
             margin: 0px;
 
+            .main__resumen--uno{
+                padding: 0rem 6rem 0rem 6rem;
+            }
+
             .main__image--uno {
                 margin-bottom: 4rem;
+                height: 80vh;
             }
 
             .main__resumen--dos {
@@ -246,23 +246,14 @@ body {
 
             .main__resumen--cuatro {
                 display: grid;
-                grid-template-columns: 50% 50%;
-                grid-template-rows: 50% 50%;
+                grid-template-columns: 1fr 1fr;
                 justify-items: center;
                 align-items: center;
-                padding: 0px;
-                row-gap: 0px;
-
-                h5,
-                p {
-                    grid-column: 1/2;
-                }
+                column-gap: 2rem;
 
                 img {
-                    grid-column: 2/3;
-                    grid-row: 1 / span 2;
                     width: 100%;
-                    padding: 2rem;
+                    
 
                 }
 
