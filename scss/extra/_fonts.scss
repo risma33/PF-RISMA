@@ -1,4 +1,4 @@
-/*fonts*/
+//font
 
 @font-face {
     font-family: "ethnocentric-italic";
@@ -10,5 +10,12 @@
     src: url(../font/ethnocentricrg.otf);
 }
 
+@font-face {
+    font-family: "roboto";
+    src: url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+        );
+}
+
 $font-italic: "ethnocentric-italic";
 $font-normal: "ethnocentric";
+$font-roboto: "roboto"

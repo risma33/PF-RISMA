@@ -1,5 +1,13 @@
-@charset "UTF-8";
-/*fonts*/
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
 @font-face {
   font-family: "ethnocentric-italic";
   src: url(../font/ethnocentric.rg-italic.otf); }
@@ -8,14 +16,9 @@
   font-family: "ethnocentric";
   src: url(../font/ethnocentricrg.otf); }
 
-/*fonts*/
 @font-face {
-  font-family: "ethnocentric-italic";
-  src: url(../font/ethnocentric.rg-italic.otf); }
-
-@font-face {
-  font-family: "ethnocentric";
-  src: url(../font/ethnocentricrg.otf); }
+  font-family: "roboto";
+  src: url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"); }
 
 /*estilos para celulares*/
 /*estilos index*/
@@ -26,26 +29,42 @@ body {
   /*estilos main*/ }
   body header nav {
     background: linear-gradient(to right, #e1e9ee, #6E99B3); }
-    body header nav .container-fluid .logo {
+    body header nav .container-fluid .full-logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
       position: relative;
-      height: 3rem;
-      width: 3rem;
-      background-color: #fff;
-      border-radius: 30%;
-      border: 1.5px solid #d0d8dc; }
-      body header nav .container-fluid .logo .logo-letter {
-        position: absolute;
-        top: 50%;
-        left: 45%;
-        transform: translate(-50%, -50%);
-        font-size: 2.5rem;
-        font-family: "ethnocentric-italic";
+      color: #ffff;
+      font-size: 1.3rem;
+      font-family: "ethnocentric-italic"; }
+      body header nav .container-fluid .full-logo .ervi {
         font-weight: bold;
-        background-image: linear-gradient(to right, #6e99b3, #e1e9ee);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        text-align: center; }
+        letter-spacing: 0.4rem;
+        margin: 0;
+        margin-left: 0.4rem; }
+      body header nav .container-fluid .full-logo .g {
+        font-size: 1.7em;
+        font-weight: bolder;
+        margin: 0; }
+    body header nav .container-fluid .full-logo:hover {
+      animation: swing 1s ease-in-out; }
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg); }
+  10% {
+    transform: rotate(10deg); }
+  30% {
+    transform: rotate(-10deg); }
+  50% {
+    transform: rotate(6deg); }
+  70% {
+    transform: rotate(-4deg); }
+  90% {
+    transform: rotate(2deg); }
+  100% {
+    transform: rotate(0deg); } }
     body header nav .container-fluid .navbar-toggler:hover {
       background-color: #ffff; }
     body header nav .container-fluid #navbarNav {
@@ -64,56 +83,45 @@ body {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     text-align: center;
-    font-family: "ethnocentric";
-    /*estilos footer*/ }
+    font-family: "ethnocentric"; }
     body .main--index .main__resumen--uno {
       color: #6e99b3;
       font-family: "ethnocentric";
       width: 100vw; }
       body .main--index .main__resumen--uno h2 {
         font-size: 1.3em;
-        padding: 4rem; }
-    body .main--index .main__image--uno {
-      height: 70vh;
-      width: 100vw;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      font-size: 13vw;
-      font-family: "ethnocentric-italic";
-      font-weight: bold;
-      background-image: linear-gradient(to right, #6e99b3, #e1e9ee);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      margin-bottom: 4rem;
-      letter-spacing: 3vw; }
-      body .main--index .main__image--uno .g {
-        font-size: 22vw;
-        font-weight: bolder;
-        background-image: linear-gradient(to right, #6e99b3, #e1e9ee);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent; }
+        padding: 4rem;
+        line-height: 1.5; }
+        body .main--index .main__resumen--uno h2 span {
+          font-size: 0.9em;
+          display: none; }
+      body .main--index .main__resumen--uno img {
+        display: block;
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0%; }
     body .main--index .main__resumen--dos, body .main--index .main__resumen--tres, body .main--index .main__resumen--cuatro {
       width: 100vw;
       height: 100%;
       color: #ffff;
-      background: linear-gradient(#6e99b3, #d9e1e6); }
+      background: linear-gradient(#6e99b3, #d9e1e6);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
       body .main--index .main__resumen--dos h3, body .main--index .main__resumen--tres h3, body .main--index .main__resumen--cuatro h3 {
         padding: 8rem 4rem 4rem 4rem;
         font-size: 1.5em; }
       body .main--index .main__resumen--dos img, body .main--index .main__resumen--tres img, body .main--index .main__resumen--cuatro img {
         display: block;
         height: auto;
-        width: 100vw;
+        width: 35rem;
         object-fit: contain;
         padding: 0rem 2rem 2rem 2rem;
         border-radius: 30%; }
     body .main--index .main__resumen--tres {
-      background: linear-gradient(#d9e1e6, #6e99b3);
-      color: #6e99b3; }
+      background: linear-gradient(#d9e1e6, #6e99b3); }
       body .main--index .main__resumen--tres h4 {
         padding: 8rem 4rem 4rem 4rem;
         font-size: 1.5em; }
@@ -134,23 +142,48 @@ body {
           color: transparent; }
       body .main--index .main__resumen--cuatro img {
         padding: 0rem 4rem 5rem 4rem;
-        border-radius: 30%; }
-    body .main--index .footer {
-      background: linear-gradient(#d9e1e6, #6e99b3);
-      width: 100vw;
-      padding: 4rem 4rem 1rem 4rem; }
-      body .main--index .footer h6 {
-        font-size: 1em;
-        color: #ffff; }
-      body .main--index .footer img {
-        height: 20px; }
+        border-radius: 0%; }
+  body .footer {
+    background: linear-gradient(#d9e1e6, #6e99b3);
+    width: 100vw;
+    padding: 1rem 4rem 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    body .footer .footer__tex {
+      font-size: 1em;
+      color: #ffff;
+      font-family: "ethnocentric";
+      text-align: center; }
+    body .footer .footer__img--redes img {
+      height: 20px;
+      width: auto; }
 
 @media screen and (min-width: 768px) {
   body .main--index {
     height: 100%;
     margin: 0px; }
     body .main--index .main__resumen--uno {
-      padding: 0rem 6rem 0rem 6rem; }
+      position: relative; }
+      body .main--index .main__resumen--uno h2 {
+        position: absolute;
+        top: 50%;
+        left: 18%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 40rem;
+        text-align: center;
+        color: white; }
+        body .main--index .main__resumen--uno h2 span {
+          display: block;
+          font-size: 0.9em; }
+      body .main--index .main__resumen--uno img {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden; }
     body .main--index .main__image--uno {
       margin-bottom: 4rem;
       height: 80vh; }
@@ -179,7 +212,6 @@ body {
       body .main--index .main__resumen--cuatro img {
         width: 100%; } }
 
-/*fonts*/
 @font-face {
   font-family: "ethnocentric-italic";
   src: url(../font/ethnocentric.rg-italic.otf); }
@@ -187,6 +219,10 @@ body {
 @font-face {
   font-family: "ethnocentric";
   src: url(../font/ethnocentricrg.otf); }
+
+@font-face {
+  font-family: "roboto";
+  src: url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"); }
 
 /*estilo celular*/
 body {
@@ -206,16 +242,24 @@ body {
       font-family: "ethnocentric"; }
       body .main--nosotros .main__nosotros--resume h2 {
         margin-bottom: 3rem; }
-    body .main--nosotros .main__nosotros--footer {
-      background: linear-gradient(#ffff, #6e99b3);
-      width: 100vw;
-      padding: 4rem 4rem 1rem 4rem; }
-      body .main--nosotros .main__nosotros--footer h3 {
-        font-size: 1em;
-        color: #ffff;
-        font-family: "ethnocentric"; }
-      body .main--nosotros .main__nosotros--footer img {
-        height: 20px; }
+    body .main--nosotros .main__nosotros--img {
+      display: none; }
+  body .footer {
+    background: linear-gradient(#d9e1e6, #6e99b3);
+    width: 100vw;
+    padding: 1rem 4rem 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    body .footer .footer__tex {
+      font-size: 1em;
+      color: #ffff;
+      font-family: "ethnocentric";
+      text-align: center; }
+    body .footer .footer__img--redes img {
+      height: 20px;
+      width: auto; }
 
 /*estilos desktop*/
 @media screen and (min-width: 768px) {
@@ -224,134 +268,212 @@ body {
     width: 100%;
     justify-items: center;
     align-items: center; }
+    body .main--nosotros .main__nosotros--img {
+      display: block;
+      height: auto;
+      width: 100%;
+      object-fit: cover; }
     body .main--nosotros .main__nosotros--footer {
       grid-column: 1 / span 2;
       color: #fff; } }
 
-/* reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-a {
-  color: inherit;
-  text-decoration: none; }
-
-/*fonts*/
 @font-face {
-  font-family: "montserrat extrabolt";
-  src: url(../font/MontserratAlternates-ExtraBold.otf); }
+  font-family: "ethnocentric-italic";
+  src: url(../font/ethnocentric.rg-italic.otf); }
 
 @font-face {
-  font-family: "montserrat bolt";
-  src: url(../font/MontserratAlternates-Bold.otf); }
+  font-family: "ethnocentric";
+  src: url(../font/ethnocentricrg.otf); }
 
-body {
+@font-face {
+  font-family: "roboto";
+  src: url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"); }
+
+body .main__login {
   background-color: #ffff;
-  height: 100%; }
-  body .main--nosotros {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    height: 100%;
-    row-gap: 0px;
-    text-align: center;
-    font-family: "ethnocentric.rg";
-    color: #6e99b3; }
-    body .main--nosotros .main__nosotros--resume {
-      padding: 5rem; }
-      body .main--nosotros .main__nosotros--resume h2 {
-        margin-bottom: 3rem; }
-    body .main--nosotros .main__nosotros--footer {
-      background: linear-gradient(#ffff, #6e99b3);
-      width: 100vw;
-      padding: 4rem 4rem 1rem 4rem; }
-      body .main--nosotros .main__nosotros--footer h3 {
-        font-size: 1em;
-        color: #ffff; }
-      body .main--nosotros .main__nosotros--footer img {
-        height: 20px; }
-
-/*estilos desktop*/
-@media screen and (min-width: 768px) {
-  body .main--nosotros {
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto 1fr;
-    width: 100%;
-    justify-items: center;
-    align-items: center; }
-    body .main--nosotros .main__nosotros--footer {
-      grid-row: 2;
-      color: #fff; } }
-
-/*estilos main.html*/
-.mainmain {
-  background-color: #f4f3eb;
-  height: 500px;
+  height: 100vh;
   display: flex;
-  flex-wrap: column wrap;
+  align-items: center;
+  justify-content: center; }
+  body .main__login form {
+    height: 20rem; }
+    body .main__login form fieldset {
+      padding: 1.5rem 1.5rem 0rem 1.5rem;
+      border: none;
+      background: linear-gradient(#d9e1e6, #6e99b3);
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+      border-radius: 5px; }
+      body .main__login form fieldset legend {
+        display: none; }
+      body .main__login form fieldset .main__login--ingreso {
+        margin-bottom: 1.5rem; }
+        body .main__login form fieldset .main__login--ingreso input {
+          border: none;
+          width: 100%;
+          padding: 0.5rem;
+          border-radius: 3px; }
+      body .main__login form fieldset .main__login--buttonis input {
+        background-color: transparent;
+        color: #ffff;
+        border: none;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 3px;
+        cursor: pointer;
+        font-family: "ethnocentric-italic"; }
+      body .main__login form fieldset .main__login--buttonis input:hover {
+        background-color: #ffff;
+        color: #6E99B3; }
+      body .main__login form fieldset .main__login--register {
+        font-family: "ethnocentric";
+        color: #ffff;
+        text-align: center;
+        padding: 1.5rem 1rem 0rem 1rem; }
+        body .main__login form fieldset .main__login--register p {
+          font-size: 0.6rem; }
+          body .main__login form fieldset .main__login--register p span {
+            font-family: "ethnocentric-italic";
+            cursor: pointer;
+            padding: 0.5rem; }
+          body .main__login form fieldset .main__login--register p span:hover {
+            background-color: #ffff;
+            color: #6E99B3; }
+
+body .footer {
+  background: linear-gradient(#d9e1e6, #6e99b3);
+  width: 100vw;
+  padding: 1rem 4rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center; }
+  body .footer .footer__tex {
+    font-size: 1em;
+    color: #ffff;
+    font-family: "ethnocentric";
+    text-align: center; }
+  body .footer .footer__img--redes img {
+    height: 20px;
+    width: auto; }
 
-.mainmain div.resumen {
-  color: #5c7a92;
-  text-align: center;
-  margin-left: 50px;
-  margin-right: 50px;
-  font-family: montserrat extrabolt; }
+@font-face {
+  font-family: "ethnocentric-italic";
+  src: url(../font/ethnocentric.rg-italic.otf); }
 
-.mainmain aside {
-  margin-left: 50px;
-  margin-right: 50px; }
+@font-face {
+  font-family: "ethnocentric";
+  src: url(../font/ethnocentricrg.otf); }
 
-/* estilos login.html*/
-.mainlogin {
-  background-color: #f4f3eb;
-  height: 400px;
+@font-face {
+  font-family: "roboto";
+  src: url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"); }
+
+/*estilos contacto*/
+body .main__contacto {
+  background-color: #ffff;
+  height: 100%;
   display: flex;
-  flex-wrap: column wrap;
+  align-items: center;
+  justify-content: center; }
+  body .main__contacto form {
+    height: 100%;
+    margin: 2rem; }
+    body .main__contacto form fieldset {
+      padding: 0px;
+      border: none;
+      background: linear-gradient(#d9e1e6, #6e99b3);
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+      border-radius: 5px; }
+      body .main__contacto form fieldset ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        width: 100%; }
+        body .main__contacto form fieldset ul li {
+          padding: 1.5rem 2rem 0rem 2rem;
+          display: block;
+          width: 100%;
+          border: none;
+          border-radius: 3px; }
+          body .main__contacto form fieldset ul li input {
+            display: block;
+            width: 100%;
+            padding: 0.7rem;
+            border: none;
+            border-radius: 3px; }
+          body .main__contacto form fieldset ul li #mensaje {
+            display: block;
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 3px; }
+        body .main__contacto form fieldset ul .button-enviar input {
+          background-color: transparent;
+          color: #ffff;
+          margin-bottom: 0.5rem;
+          border: none;
+          width: 100%;
+          padding: 0.5rem;
+          border-radius: 3px;
+          cursor: pointer;
+          font-family: "ethnocentric-italic"; }
+        body .main__contacto form fieldset ul .button-enviar input:hover {
+          background-color: #ffff;
+          color: #6E99B3; }
+
+body .footer {
+  background: linear-gradient(#d9e1e6, #6e99b3);
+  width: 100vw;
+  padding: 1rem 4rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start; }
+  align-items: center; }
+  body .footer .footer__tex {
+    font-size: 1em;
+    color: #ffff;
+    font-family: "ethnocentric";
+    text-align: center; }
+  body .footer .footer__img--redes img {
+    height: 20px;
+    width: auto; }
 
-.mainlogin form fieldset {
-  margin: 50px;
-  padding: 20px;
-  border: none;
-  background-color: #8999a5;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-  border-radius: 5px; }
+@font-face {
+  font-family: "ethnocentric-italic";
+  src: url(../font/ethnocentric.rg-italic.otf); }
 
-legend {
-  display: none; }
+@font-face {
+  font-family: "ethnocentric";
+  src: url(../font/ethnocentricrg.otf); }
 
-.ingreso {
-  margin-bottom: 20px; }
+@font-face {
+  font-family: "roboto";
+  src: url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"); }
 
-/*agrege los input de contatacto*/
-input[type="email"],
-input[type="password"],
-input[type="text"],
-input[type="tel"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 3px; }
-
-input[type="submit"] {
-  background-color: #f4f3eb;
-  color: #5c7a92;
-  border: none;
-  width: 100%;
-  padding: 10px 20px;
-  border-radius: 3px;
-  cursor: pointer;
-  font-family: montserrat extrabolt; }
-
-input[type="submit"]:hover {
-  background-color: #305b80; }
+body .letter {
+  position: relative;
+  height: 6rem;
+  width: 6rem;
+  background-color: #fff;
+  border-radius: 30%;
+  border: 1.5px solid #d0d8dc;
+  margin: 200px; }
+  body .letter .logo-letter {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    padding: 0.5rem;
+    font-size: 5rem;
+    font-family: "ethnocentric-italic";
+    font-weight: bold;
+    background: linear-gradient(to right, #6E99B3, #e1e9ee);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    transition: transform 0.5s, opacity 0.5s; }
 
 /*estilos firstpage*/
 .mainservicios {
@@ -375,95 +497,3 @@ input[type="submit"]:hover {
   padding: 10px 0px;
   width: 100%;
   text-align: center; }
-
-/*estilos contacto*/
-.maincontacto {
-  background-color: #f4f3eb;
-  height: 100%;
-  display: flex;
-  flex-wrap: column wrap;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 5%;
-  padding-bottom: 10%; }
-
-.maincontacto fieldset {
-  margin: 100px;
-  padding: 20px;
-  border: none;
-  background-color: #8999a5;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-  border-radius: 7px;
-  font-family: montserrat extrabolt; }
-
-.maincontacto fieldset ul {
-  list-style-type: none; }
-
-.maincontacto fieldset ul li {
-  margin: 20px; }
-
-#mensaje {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 3px; }
-
-/*estilos nosotros*/
-.mainnosotros {
-  background-color: #f4f3eb;
-  height: 100%;
-  display: flex;
-  flex-wrap: column wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 5% 5%; }
-
-.mainnosotros .nosotros {
-  font-family: Arial, sans-serif;
-  color: #305b80; }
-
-.mainnosotros .nosotros h2 {
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 5%;
-  margin-bottom: 5%; }
-
-.mainnosotros .nosotros p {
-  text-align: center;
-  margin-bottom: 2%;
-  font-size: 20px;
-  margin-bottom: 5%; }
-
-.mainnosotros aside {
-  margin-left: 50px; }
-
-/*estilos footer*/
-/*estilos imagenes*/
-img.redes {
-  width: 30px;
-  height: 30px; }
-
-img.logosinbordespequeño {
-  height: 20px;
-  width: 134px; }
-
-img.cuadradagrande {
-  height: 200px;
-  width: 200px;
-  overflow: hidden; }
-
-img.pequeña {
-  width: 84px;
-  height: 40px; }
-
-img.mediana {
-  width: 210px;
-  height: 100px; }
-
-img.grande {
-  width: 622px;
-  height: 300px;
-  overflow: hidden; }
