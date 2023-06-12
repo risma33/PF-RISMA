@@ -160,7 +160,8 @@ body {
       height: 20px;
       width: auto; }
 
-@media screen and (min-width: 768px) {
+/* large devices*/
+@media screen and (min-width: 992px) {
   body .main--index {
     height: 100%;
     margin: 0px; }
@@ -262,7 +263,7 @@ body {
       width: auto; }
 
 /*estilos desktop*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   body .main--nosotros {
     grid-template-columns: 1fr 1fr;
     width: 100%;
@@ -438,42 +439,6 @@ body .footer {
   body .footer .footer__img--redes img {
     height: 20px;
     width: auto; }
-
-@font-face {
-  font-family: "ethnocentric-italic";
-  src: url(../font/ethnocentric.rg-italic.otf); }
-
-@font-face {
-  font-family: "ethnocentric";
-  src: url(../font/ethnocentricrg.otf); }
-
-@font-face {
-  font-family: "roboto";
-  src: url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"); }
-
-body .letter {
-  position: relative;
-  height: 6rem;
-  width: 6rem;
-  background-color: #fff;
-  border-radius: 30%;
-  border: 1.5px solid #d0d8dc;
-  margin: 200px; }
-  body .letter .logo-letter {
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    padding: 0.5rem;
-    font-size: 5rem;
-    font-family: "ethnocentric-italic";
-    font-weight: bold;
-    background: linear-gradient(to right, #6E99B3, #e1e9ee);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-align: center;
-    transition: transform 0.5s, opacity 0.5s; }
 
 /*estilos firstpage*/
 .mainservicios {
