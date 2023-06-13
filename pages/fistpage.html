@@ -5,45 +5,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--LINK CSS-->
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Menu - THESTHARA</title>
+
+    <!-- link favicon -->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+
+    <!-- link a bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- link a mi css -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- link a animate-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>LANDING</title>
 </head>
 
 <body>
+
     <header id="encabezado">
 
-        <nav class="menumain">
-            <!--logo con link de vuelta al principio-->
-            <div class="imagenreturn">
-                <img class="logosinbordespequeño" src="../img/logo-sin-bordes.png" alt="Logo de regreso">
-            </div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="full-logo">
+                    <p class="g">G</p>
+                    <p class="ervi">
+                        <a href="../index.html">ERVI</a>
+                    </p>
+                </div>
 
-            <!--menu principal-->
-            <div class="menuprincipalmain">
-                <ul>
-                    <li>
-                        <a href="nosotros.html">NOSOTROS</a>
-                    </li>
-                    <li>COMO FUNCIONA</li>
-                    <li>SERVICIOS</li>
-                    <li>FAQs</li>
-                    <li><a href="contacto.html">CONTACTO</a></li>
-                </ul>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse nav-pills justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">NOSOTROS</a>
+                        </li>
+                        <!-- No logre direccionarlo desde inicio de sesion, la linkeo aca no es el lugar original-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="fistpage.html">SERVICIOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">CONTACTO</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-
-            <!-- menu registro y login-->
-            <div class="menuloginmain">
-                <ul>
-                    <li>
-                        <a href="../main.html">
-                            Salir
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </Nav>
-
+        </nav>
     </header>
 
     <!--SERVICIOS-->
@@ -79,14 +93,18 @@
     </main>
 
     <footer class="footer">
-        <h2>TODOS LOS DERECHOS RESERVADOS</h2>
-        <div class="redes">
-            <img class="redes" src="../img/instagram.png" alt="instagram">
-            <img class="redes" src="../img/facebook.png" alt="facebook">
-            <img class="redes" src="../img/youtube.png" alt="YouTube">
+        <div class="footer__tex">TODOS LOS DERECHOS RESERVADOS</div>
+        <div class="footer__img--redes">
+          <img class="redes" src="../img/instagram.png" alt="instagram">
+          <img class="redes" src="../img/facebook.png" alt="facebook">
+          <img class="redes" src="../img/youtube.png" alt="YouTube">
         </div>
-
-    </footer>
+      </footer>
+      
+      <!-- link a scrip bs-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
