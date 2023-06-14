@@ -16,19 +16,10 @@ a {
 @import "html/nosotros";
 @import "html/login";
 @import "html/contacto";
+@import "html/landing";
 
 
 /*estilos firstpage*/
-.mainservicios {
-    background-color: #f4f3eb;
-    height: 500px;
-    font-family: montserrat extrabolt;
-    width: 100%;
-    color: #5c7a92;
-
-}
-
-
 .mainservicios .divservicios {
     display: flex;
     flex-flow: row wrap;

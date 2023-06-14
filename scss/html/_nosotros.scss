@@ -7,7 +7,8 @@
 
 body {
     background-color: #ffff;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
 
     .main--nosotros {
         display: grid;
@@ -26,6 +27,14 @@ body {
             h2 {
                 margin-bottom: 3rem;
             }
+
+            .main__nosotros--texto {
+                display: none;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
         }
 
         .main__nosotros--img {
@@ -33,34 +42,77 @@ body {
         }
     }
 
-    .footer {
+    .main__nosotros--footer {
         @include footer;
     }
 }
 
+/*estilos tablet*/
+@media screen and (min-width: 768px) {
+    body {
+        .main--nosotros {
+            .main__nosotros--resume {
+                padding: 5rem;
+                font-family: $font-normal;
+
+                h2 {
+                    margin-bottom: 3rem;
+                }
+
+                .main__nosotros--texto {
+                    display: block;
+                }
+
+                h3 {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 /*estilos desktop*/
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
 
     body {
         .main--nosotros {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
+            grid-row: 1fr 1fr;
             width: 100%;
+            height: 100%;
             justify-items: center;
             align-items: center;
 
+            .main__nosotros--resume {
+                padding: 5rem;
+                font-family: $font-normal;
+
+                h2 {
+                    margin-bottom: 3rem;
+                }
+
+                .main__nosotros--texto {
+                    display: block;
+                }
+
+                h3 {
+                    display: none;
+                }
+            }
+
             .main__nosotros--img {
                 display: block;
-                height: auto;
-                width: 100%;
-                object-fit: cover;
-            }
+                height: 100%;
 
-            .main__nosotros--footer {
-                grid-column: 1 / span 2;
-                color: #fff;
+                img{
+                   height: 40rem;
+                width: auto;
+                object-fit: contain; 
+                }
+                
             }
-
         }
+
     }
 
 }
