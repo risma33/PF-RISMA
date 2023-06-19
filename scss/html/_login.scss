@@ -28,7 +28,8 @@ body {
 
                 .main__login--ingreso {
                     margin-bottom: 1.5rem;
-                    input{
+
+                    input {
                         border: none;
                         width: 100%;
                         padding: 0.5rem;
@@ -37,7 +38,7 @@ body {
                 }
 
                 .main__login--buttonis {
-                    input{
+                    input {
                         background-color: transparent;
                         color: #ffff;
                         border: none;
@@ -46,11 +47,11 @@ body {
                         border-radius: 3px;
                         cursor: pointer;
                         font-family: $font-italic;
-                    }
 
-                    input:hover {
-                        background-color: #ffff;
-                        color: #6E99B3;
+                        &:hover {
+                            background-color: #ffff;
+                            color: #6E99B3;
+                        }
                     }
                 }
 
@@ -67,11 +68,11 @@ body {
                             font-family: $font-italic;
                             cursor: pointer;
                             padding: 0.5rem;
-                        }
 
-                        span:hover {
-                            background-color: #ffff;
-                            color: #6E99B3;
+                            &:hover {
+                                background-color: #ffff;
+                                color: #6E99B3;
+                            }
                         }
                     }
 

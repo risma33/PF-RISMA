@@ -11,11 +11,10 @@
 }
 
 @font-face {
-    font-family: "roboto";
-    src: url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
-        );
+    font-family: "montserrat";
+    src: url(../../font/Montserrat-Bold.ttf);
 }
 
 $font-italic: "ethnocentric-italic";
 $font-normal: "ethnocentric";
-$font-roboto: "roboto"
+$font-montserrat: "montserrat"

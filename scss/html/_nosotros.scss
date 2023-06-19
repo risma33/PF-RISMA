@@ -9,6 +9,7 @@ body {
     background-color: #ffff;
     display: flex;
     flex-direction: column;
+    height: 100%;
 
     .main--nosotros {
         display: grid;
@@ -23,6 +24,7 @@ body {
         .main__nosotros--resume {
             padding: 5rem;
             font-family: $font-normal;
+            height: 100%;
 
             h2 {
                 margin-bottom: 3rem;
@@ -67,6 +69,14 @@ body {
                     display: none;
                 }
             }
+        }
+    }
+}
+
+@media screen and (min-height: 870px){
+    body{
+        .main--nosotros{
+            height: 90vh;
         }
     }
 }

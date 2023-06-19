@@ -6,17 +6,14 @@
 //vision para celulares
 /*estilos contacto*/
 body {
-
     .main__contacto {
         background-color: #ffff;
-        height: 100%;
         display: flex;
-        align-items: center;
         justify-content: center;
 
         form {
-            height: 100%;
             margin: 2rem;
+            height: 100%;
 
             fieldset {
                 padding: 0px;
@@ -83,5 +80,19 @@ body {
 
     .footer {
         @include footer;
+        position: relative;
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (min-height: 800px) {
+    body{
+        .main__contacto{
+            height: 90vh;
+
+            form{
+                margin: 4rem;
+            }
+        }
     }
 }

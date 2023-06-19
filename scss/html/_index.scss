@@ -37,10 +37,10 @@ body {
                             .nav-link {
                                 font-family: $font-normal;
                                 color: #fff;
-                            }
 
-                            .nav-link:hover {
-                                color: #5c7a92;
+                                &:hover{
+                                    color: #5c7a92;
+                                }
                             }
                         }
                     }
@@ -102,17 +102,18 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            font-family: $font-montserrat;
+            font-size: 1.3rem;
 
             h3 {
                 padding: 8rem 4rem 4rem 4rem;
                 font-size: 1.5em;
-
             }
 
 
             img {
                 display: block;
-                height: 20rem;
+                height: 25rem;
                 width: auto;
                 object-fit: contain;
                 padding: 0rem 2rem 2rem 2rem;
@@ -200,12 +201,10 @@ body {
                     overflow: hidden;
                 }
             }
-
-            
-        }
-
-        .footer{
-            
+            .main__resumen--dos{
+                font-family: $font-montserrat;
+                font-size: 1.3rem;
+            }
         }
     }
 }
@@ -256,6 +255,7 @@ body {
                 padding: 2rem;
                 justify-content: center;
                 align-items: center;
+                font-family: $font-normal;
 
 
                 img {
