@@ -17,12 +17,14 @@ body {
 
             .container-fluid {
                 .full-logo {
-                    @include full-logo-size-ajust (1.3rem, #ffff)
+                    @include full-logo-size-ajust (1.3rem, #ffff);
+
+                    &:hover {
+                        @include swing-animation;
+                    }
                 }
 
-                .full-logo:hover {
-                    @include swing-animation;
-                }
+
 
 
                 .navbar-toggler:hover {
@@ -38,7 +40,7 @@ body {
                                 font-family: $font-normal;
                                 color: #fff;
 
-                                &:hover{
+                                &:hover {
                                     color: #5c7a92;
                                 }
                             }
@@ -144,14 +146,12 @@ body {
                 font-size: 1.5em;
                 padding: 4rem;
 
-                span {
-                    font-size: 1.5rem;
-                    margin-right: 1rem;
-                    font-weight: bolder;
-                    background-image: linear-gradient(to right, #e1e9ee, #ffff);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    color: transparent;
+                .full-logo {
+                    @include full-logo-size-ajust (1.3rem, #ffff);
+
+                    &:hover {
+                        @include swing-animation;
+                    }
                 }
             }
 
@@ -201,7 +201,8 @@ body {
                     overflow: hidden;
                 }
             }
-            .main__resumen--dos{
+
+            .main__resumen--dos {
                 font-family: $font-montserrat;
                 font-size: 1.3rem;
             }
@@ -287,8 +288,6 @@ body {
 
                 img {
                     width: 100%;
-
-
                 }
 
             }

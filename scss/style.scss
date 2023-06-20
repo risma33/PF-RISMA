@@ -17,23 +17,3 @@ a {
 @import "html/login";
 @import "html/contacto";
 @import "html/landing";
-
-
-/*estilos firstpage*/
-.mainservicios .divservicios {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-content: center;
-    text-align: center;
-    border-radius: 3px;
-    cursor: pointer;
-    font-family: montserrat extrabolt;
-}
-
-.mainservicios .divservicios div .servicios-botton {
-    padding: 10px 0px;
-    width: 100%;
-    text-align: center;
-
-}
